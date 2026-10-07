@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SA-WILLER - Gestão de Treinos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gym Control - SA-WILLER</h1>
+  </header>
+
+  <main class="container">
+    <!-- Formulário: Exercícios -->
+    <section class="card">
+      <h2>Cadastrar Exercício</h2>
+      <form id="form-exercicio">
+        <input type="text" id="nome-exercicio" placeholder="Nome (ex: Supino Reto)" required>
+        <input type="text" id="grupo-muscular" placeholder="Grupo Muscular (ex: Peito)" required>
+        <button type="submit">Guardar Exercício</button>
+      </form>
+    </section>
+
+    <!-- Formulário: Treinos -->
+    <section class="card">
+      <h2>Cadastrar Treino</h2>
+      <form id="form-treino">
+        <input type="text" id="nome-treino" placeholder="Nome (ex: Treino A)" required>
+        <input type="text" id="objetivo-treino" placeholder="Objetivo (ex: Hipertrofia)" required>
+        <button type="submit">Guardar Treino</button>
+      </form>
+    </section>
+
+    <!-- Formulário: Associar Exercício a Treino -->
+    <section class="card">
+      <h2>Vincular Exercício ao Treino</h2>
+      <form id="form-associar">
+        <select id="select-treino" required>
+          <option value="">Selecione o Treino</option>
+        </select>
+        <select id="select-exercicio" required>
+          <option value="">Selecione o Exercício</option>
+        </select>
+        <button type="submit">Vincular</button>
+      </form>
+    </section>
+
+    <!-- Lista de Treinos e Exercícios -->
+    <section class="card full-width">
+      <h2>Lista de Treinos Registados</h2>
+      <div id="lista-treinos"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
